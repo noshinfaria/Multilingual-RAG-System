@@ -1,0 +1,24 @@
+services:
+  vector-builder:
+    image: multilingual-rag-system:latest
+    container_name: vector_store_builder
+    command: python build_vector_store.py
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: "no"  # run once, then stop
+
+  app:
+    image: multilingual-rag-system:latest
+    container_name: rag_system_app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    env_file: .env
+    restart: unless-stopped
+

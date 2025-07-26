@@ -37,3 +37,7 @@ python app.py
     Langchain 
 
     tesseract
+
+
+
+``` docker build -t multilingual-rag-system:latest . ```

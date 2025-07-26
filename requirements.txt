@@ -6,3 +6,7 @@ faiss-cpu
 sentence-transformers
 langchain
 numpy
+openai
+uvicorn[standard]
+langdetect
+fastapi
