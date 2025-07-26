@@ -24,7 +24,7 @@ Build a multilingual RAG system that retrieves and generates answers from a **Ba
 ---
 
 ##  Project Structure
-
+```bash
 ├── app/
 │ ├── main.py # FastAPI app
 │ ├── agent.py # Retrieval + generation
@@ -42,7 +42,7 @@ Build a multilingual RAG system that retrieves and generates answers from a **Ba
 ├── requirements.txt
 ├── .env
 └── README.md
-
+```
 
 
 ---
